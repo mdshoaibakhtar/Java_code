@@ -106,12 +106,9 @@ public class version_1
         check_min(arr,n);
         check_max(arr,n);
     }
-}*/
+}
 
 package code.master;
-
-import javax.swing.*;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class version_1
@@ -124,19 +121,117 @@ public class version_1
             System.out.print(" ");
         }
     }
-    static void sort(int arr[],int n)
+    static void sort(int arr[],int n,int k)
     {
+        for(int i=0;i<n-1;i++)
+        {
+            for(int j=0;j<n-1;j++)
+            {
+                if (arr[j]>arr[j+1])
+                {
+//                   Swap
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+            System.out.println("The kth Maximum Element is "+arr[k-1]);
     }
     public static void main(String [] args)
     {
-        int arr[] = {1,2,3,4};
+        //           0 ,1,2,3
+        int arr[] = {11,21,3,40,00002,10000,-7};
         int n = arr.length;
+        int k = 2;
+        System.out.println("Unsorted Array:");
         traversal(arr,n);
-        arr.SortOrder()
+        System.out.println("\nsorted Array:");
+        sort(arr,n,k);
+        traversal(arr,n);
+
     }
 }
 
 
+package code.master;
+import java.util.Arrays;
+public class version_1
+{
+    static void traversal(int []arr,int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
+    }
+    public static void main(String [] args)
+    {
+        int [][] arr = {{10,20,30},
+                        {40,50,60}};
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=0;j<arr.length;j++)
+            {
+                System.out.println(arr[i][j]);
+//                arr[i][j];
+            }
+        }
+
+    }
+}*/
+//Oops starting
+package code.master;
+class employee //custom class
+{
+    int id;
+    int sal;
+    String name;
+    public void printdetails()
+    {
+        System.out.println("my id is "+id);
+        System.out.println("my name is "+name);
+        System.out.println("my sal is " +sal);
+    }
+    public int getsalary()
+    {
+        return sal;
+    }
+
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        System.out.println("This is our custom class");
+        //setting attributes
+        employee sc = new employee();                //instantiating a nw object
+        sc.id = 111;
+        sc.name = "md shoaib";
+        sc.sal = 48115999;
+        employee st = new employee();               //instantiating a nw object
+        st.id = 222;
+        st.name = "Tanuja";
+        st.sal = 48115999;
+//        System.out.println(sc.id);
+//        System.out.println(sc.name);
+//        System.out.println(sc.sal);
+//        System.out.println(" ");
+//        System.out.println(st.id);
+//        System.out.println(st.name);
+//        System.out.println(st.sal);
+
+        sc.printdetails();
+//        st.printdetails();
+//        harry.printdetails();
+//        john.printdetails();
+//        int sal = john.getsalary();
+        System.out.println(sc.sal);
+
+
+    }
+}
 
 
 
