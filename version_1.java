@@ -362,9 +362,7 @@ public class version_1
         separate_negative(arr,n);
 
     }
-}*/
-
-
+}
 package code.master;
 public class version_1
 {
@@ -383,28 +381,27 @@ public class version_1
         }
     }
 
-    static void union(int arr[],int brr[],int crr[],int n,int m)
+    static void union(int arr[],int brr[],int crr[],int n,int m,int o)
     {
         if(n > m)
         {
-        System.out.println("n badaa hai");
         int count = 0;
-        for(int i=0;i<n;i++)
+        for (int i = 0; i < n; i++)
         {
-            for(int j=0;j<m;j++)
+            for (int j = 0; j < m; j++)
             {
-                if(arr[i] == brr[j])
+                if (arr[i] == brr[j])
                 {
                     count++;
                 }
             }
         }
-        int res = count + (n-m);
+        int res = count + (n - m);
         System.out.println(res);
-        }
+
+    }
         else
         {
-            System.out.println("m badaa hai");
             int count = 0;
             for(int i=0;i<n;i++)
             {
@@ -425,18 +422,145 @@ public class version_1
     }
     public static void main(String[] args)
     {
-        int []arr={1,2,3,4,5,10,45};
-        int []brr={45,50,111,4547,7,1,2,3,4,5,10};
+        int []arr={1,2,4,5};
+        int []brr={4,5};
+        int []crr={0,0,0,0,0,0};
         int n = arr.length;
         int m = brr.length;
-        int []crr=new int[m+n];
+        int o = crr.length;
         traversal(arr,brr,n,m);
         System.out.println();
-        union(arr,brr,crr,n,m);
+        union(arr,brr,crr,n,m,o);
+
+    }
+}*/
+
+/*
+//Q.1
+package code.master;
+class day
+{
+    public void display()
+    {
+        System.out.println("Welcome To the Display");
+
+    }
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        day sc = new day();
+        sc.display();
+
+    }
+}
+//Q.2
+package code.master;
+
+class Day
+{
+    public void display()
+    {
+        System.out.println("Welcome To the Display Of Day");
+
+    }
+
+}
+class Night
+{
+    public void display()
+    {
+        System.out.println("Welcome To the Display Of Night");
+
+    }
+
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        Day sc = new Day();
+        Night st = new Night();
+        sc.display();
+        st.display();
 
     }
 }
 
+//Q.3
+package code.master;
+class circle
+{
+    int area;
+    public int setRadius(int rad)
+    {
+        System.out.println("Radius Of The circle is "+rad);
+        return rad;
+    }
+    public int calArea(int rad)
+    {
+        double area = Math.PI * (rad * rad);
+        System.out.println("Area Of The Circle is "+area);
+        return (int) area;
+    }
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        circle sc = new circle();
+        sc.calArea(2);
+    }
+}
+//Q.4
+package code.master;
+class salesTaxCalculator
+{
+    int amount,taxRate;
+    public int calTax(int amount)
+    {
+        System.out.println(amount);
+        return amount;
+    }
+    public int setAmrate(int taxRate)
+    {
+        return taxRate;
+    }
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        salesTaxCalculator sc = new salesTaxCalculator();
+        sc.calTax(1000);
+        sc.setAmrate(2000);
+
+    }
+}
+//Q.5
+package code.master;
+class Num
+{
+    int x,y,temp;
+    public void swap(int x,int y)
+    {
+        System.out.println("Before Swap:"+x+" "+y);
+        temp = x;
+        x = y;
+          y = temp;
+        System.out.println("After Swap:"+x+" "+y);
+    }
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        Num sc = new Num();
+        sc.swap(10,20);
+    }
+}
+*/
 
 
 
