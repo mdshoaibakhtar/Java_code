@@ -180,7 +180,7 @@ public class version_1
         }
 
     }
-}*/
+}
 //Oops starting
 package code.master;
 class employee //custom class
@@ -234,9 +234,208 @@ public class version_1
 }
 
 
+package code.master;
+public class version_1
+{
+    static  void traversal(int arr[],int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
+    }
+
+    static void separate(int arr[],int n)
+    {
+        int zero = 0;
+        int one = 0;
+        int two = 0;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i] == 0)
+            {
+                zero++;
+            }
+            if(arr[i] == 1)
+            {
+                one++;
+            }
+            else if(arr[i] == 2)
+            {
+               two++;
+            }
+        }
+        System.out.println("\nNumber of Zero is "+zero);
+        System.out.println("Number of One is "+one);
+        System.out.println("Number of two is "+two);
+
+        for(int z = 0;z<zero;z++)
+        {
+            System.out.print(0);
+            System.out.print(" ");
+        }
+        for(int o = 0;o<one;o++)
+        {
+            System.out.print(1);
+            System.out.print(" ");
+        }
+        for(int t = 0;t<two;t++)
+        {
+            System.out.print(2);
+            System.out.print(" ");
+        }
+    }
+    public static void main(String[] args)
+    {
+        int []arr={1,2,1,0,1,2};
+        int n = arr.length;
+        traversal(arr,n);
+        System.out.println();
+        separate(arr,n);
+
+    }
+}
+package code.master;
+public class version_1
+{
+    static  void traversal(int arr[],int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
+    }
+
+    static void separate_negative(int arr[],int n)
+    {
+        int negative = 0;
+        int positive = 0;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i] < 0)
+            {
+                negative++;
+                System.out.print(arr[i]);
+                System.out.print(" ");
+            }
+//            else
+//            {
+//                positive++;
+//                System.out.println(arr[i]+" is positive");
+//            }
+
+//            System.out.print("\n"+negative);
+//            System.out.println(positive);
+        }
+
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i] > 0)
+            {
+                negative++;
+                System.out.print(arr[i]);
+                System.out.print(" ");
+            }
+        }
+//        System.out.println(positive);
+//        System.out.print("Number of Negative Is "+negative);
+//        System.out.println(" ");
+//        System.out.print("Number Of Positive Is "+positive);
+
+//        for(int p = 0;p<negative;p++)
+//        {
+//            System.out.println(negative);
+//        }
+//        for(int p = 0;p<positive;p++)
+//        {
+//            System.out.println(positive);
+//        }
+    }
+    public static void main(String[] args)
+    {
+        int []arr={-1,2,1,1,-2};
+        int n = arr.length;
+        traversal(arr,n);
+        System.out.println();
+        separate_negative(arr,n);
+
+    }
+}*/
 
 
+package code.master;
+public class version_1
+{
+    static  void traversal(int arr[],int brr[],int n,int m)
+    {
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
+        System.out.println("");
+        for(int i=0;i<m;i++)
+        {
+            System.out.print(brr[i]);
+            System.out.print(" ");
+        }
+    }
 
+    static void union(int arr[],int brr[],int crr[],int n,int m)
+    {
+        if(n > m)
+        {
+        System.out.println("n badaa hai");
+        int count = 0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(arr[i] == brr[j])
+                {
+                    count++;
+                }
+            }
+        }
+        int res = count + (n-m);
+        System.out.println(res);
+        }
+        else
+        {
+            System.out.println("m badaa hai");
+            int count = 0;
+            for(int i=0;i<n;i++)
+            {
+                for(int j=0;j<m;j++)
+                {
+                    if(arr[i] == brr[j])
+                    {
+                        count++;
+                        System.out.print(brr[j]);
+                        System.out.print(" ");
+                    }
+                }
+            }
+            System.out.println("");
+            int res = count + (m-n);
+            System.out.println(res);
+        }
+    }
+    public static void main(String[] args)
+    {
+        int []arr={1,2,3,4,5,10,45};
+        int []brr={45,50,111,4547,7,1,2,3,4,5,10};
+        int n = arr.length;
+        int m = brr.length;
+        int []crr=new int[m+n];
+        traversal(arr,brr,n,m);
+        System.out.println();
+        union(arr,brr,crr,n,m);
+
+    }
+}
 
 
 
