@@ -434,7 +434,6 @@ public class version_1
 
     }
 }*/
-
 /*
 //Q.1
 package code.master;
@@ -442,8 +441,7 @@ class day
 {
     public void display()
     {
-        System.out.println("Welcome To the Display");
-
+        System.out.println("Welcome To the Display Method In Class Day");
     }
 }
 public class version_1
@@ -488,6 +486,7 @@ public class version_1
     }
 }
 
+
 //Q.3
 package code.master;
 class circle
@@ -513,6 +512,8 @@ public class version_1
         sc.calArea(2);
     }
 }
+
+
 //Q.4
 package code.master;
 class salesTaxCalculator
@@ -520,7 +521,6 @@ class salesTaxCalculator
     int amount,taxRate;
     public int calTax(int amount)
     {
-        System.out.println(amount);
         return amount;
     }
     public int setAmrate(int taxRate)
@@ -533,8 +533,9 @@ public class version_1
     public static void main(String[] args)
     {
         salesTaxCalculator sc = new salesTaxCalculator();
-        sc.calTax(1000);
-        sc.setAmrate(2000);
+
+        System.out.println("Amount Will Be "+sc.calTax(1000));
+        System.out.println("Taxrate wil be "+sc.setAmrate(2000));
 
     }
 }
@@ -560,8 +561,196 @@ public class version_1
         sc.swap(10,20);
     }
 }
-*/
 
+//Overloaded
+package code.master;
+public class version_1
+{
+    static void foo()
+    {
+        System.out.println("This Is Foo Without Any Argument");
+    }
+
+    static void foo(int a,int b)
+    {
+        int c = a+b;
+        System.out.println(c);
+    }
+    public static void main(String[] args)
+    {
+        foo();
+        foo(5,3);
+    }
+}
+
+
+package code.master;
+class employee
+{
+    int salary;
+    String name;
+
+    public void setSalary(int n)
+    {
+        salary = n;
+    }
+
+    public int getSalary()
+    {
+        return salary;
+    }
+
+    public void setName(String newname)
+    {
+        name = newname;
+    }
+    public String getName()
+    {
+        return name;
+    }
+
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        employee sc = new employee();
+        sc.setSalary(100);
+        sc.setName("mdshoaib");
+        System.out.println(sc.getSalary());
+        System.out.println(sc.getName());
+    }
+}
+
+package code.master;
+
+import java.util.Random;
+
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        Random ran = new Random();
+        int number = ran.nextInt(4);
+        System.out.println(number);
+    }
+}
+
+//Q.8
+package code.master;
+public class version_1
+{
+    static int max(int a,int b)
+    {
+
+        return Math.max(a,b);
+    }
+    static float max(double x, double y)
+    {
+        return (float) Math.max(x,y);
+    }
+    public static void main(String[] args)
+    {
+       int maximum =  max(10,20);
+       float maximumm = max(10.2,20.2);
+        System.out.println(maximum + " is The maximum");
+        System.out.println(maximumm + " is The maximum");
+
+    }
+}
+
+//Q.9
+package code.master;
+class Shape
+{
+    //Sphere
+    public int calculateVolume(int r)
+    {
+      int volume = (int) ((4/3) * Math.PI * (r*r*r));
+        System.out.println("Volume Of The Sphere is "+volume);
+      return volume;
+    }
+    //Cone
+    public int calculateVolume(int r,int h)
+    {
+       int volume =(int) (Math.PI *(r*r)*(h/3));
+        System.out.println("Volume Of The Cone Is "+volume);
+       return volume;
+    }
+//    //Box
+    public int calculateVolume(int length,int height,int breadth)
+    {
+      int volume = length * height * breadth;
+        System.out.println("volume Of The box is "+volume);
+      return volume;
+    }
+
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        Shape sc = new Shape();
+        sc.calculateVolume(2);
+        sc.calculateVolume(2,3);
+        sc.calculateVolume(2,2,2);
+
+
+    }
+}
+
+
+
+//Q.10
+package code.master;
+class Fact
+{
+    static int factorial(int n)
+    {
+        if(n == 0 )
+        {
+            return 0;
+        }
+        if(n == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return n * factorial(n-1);
+        }
+
+    }
+}
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        Fact sc = new Fact();
+        int n=5;
+        System.out.println(sc.factorial(n)+" is The factorial of "+n);
+
+
+    }
+}
+*/
+//Q.7
+package code.master;
+import java.util.Date;
+public class version_1
+{
+
+    static Date date_time()
+    {
+        Date curr = new Date();
+//        System.out.println(curr);
+        return curr;
+    }
+    public static void main(String[] args)
+    {
+        System.out.println("The Current date And Time is "+date_time());
+    }
+}
 
 
 
