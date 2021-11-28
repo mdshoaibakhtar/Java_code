@@ -436,7 +436,107 @@ public class version_1
         }
     }
 }*/
+/*
+package code.master;
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        System.out.println("it's a multidimensional array");
+        int [][]flats = {{1,2,3},
+                         {4,5,6}};
+        for(int i=0;i<flats.length;i++)
+        {
+            for(int j=0;j<flats[i].length;j++)
+            {
+                System.out.print(flats[i][j]);
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
+//Find The Number Of N Digits which is divisible by 3 but not with 9 ?
+package code.master;
 
+import java.util.Scanner;
+
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Hello World");
+        Scanner sc = new Scanner(System.in);
+            int n=sc.nextInt();
+            for(int i=1;i<=n;i++)
+            {
+                System.out.println(i);
+                if(i==1 || i==n)
+                {
+                    System.out.print(3);
+                }
+                else {
+                    System.out.print(0);
+                }
+            }
+            System.out.println();
+
+    }
+}
+
+package code.master;
+import java.util.Scanner;
+public class version_1
+{
+    public static void main(String [] args0)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter The Numbr of Dost And Slices");
+        int n= sc.nextInt();
+        int k= sc.nextInt();
+
+        for(int x = 1;x<100;x++)
+        {
+            int p = (k * x ) % n;
+            if( p == 0)
+            {
+                System.out.println(p);
+                System.out.println(x);
+                break;
+            }
+        }
+    }
+}*/
+
+package code.master;
+import java.util.Scanner;
+public class version_1 {
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        for(int i=0;i<t;i++)
+        {
+            int s = sc.nextInt();
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int c = sc.nextInt();
+
+            float sum = ((((float)s)/100)*c)+s;
+            System.out.println(sum);
+            if(a <= sum && sum <=b)
+            {
+                System.out.println(sum);
+                System.out.println("yes");
+            }
+            else
+            {
+                System.out.println(sum);
+                System.out.println("No");
+            }
+        }
+    }
+}
 
 
 
