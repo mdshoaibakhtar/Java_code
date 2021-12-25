@@ -506,8 +506,7 @@ public class version_1
             }
         }
     }
-}*/
-
+}
 package code.master;
 import java.util.Scanner;
 public class version_1 {
@@ -538,12 +537,435 @@ public class version_1 {
     }
 }
 
+package code.master;
+import java.util.Scanner;
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+//        char first = sc.next().charAt(0);
+//        char second = sc.next().charAt(0);
+//        char third = sc.next().charAt(0);
+//
+//        char x = sc.next().charAt(0);
+//        char y = sc.next().charAt(0);
+
+        char first = 'A';
+        char second = 'B';
+        char third = 'C';
+
+        char x = 'C';
+        char y = 'A';
 
 
+//        A B C
+//        A B
+        if(x==first && y==second)
+        {
+            System.out.println(x);
+        }
+        else if(x == first && y == third)
+        {
+            System.out.println(x);
+        }
+        else if(x==second && y==first)
+        {
+            System.out.println(y);
+        }
+        else if(x==second && y==third)
+        {
+            System.out.println(x);
+        }
+        else if(x==third && y==first)
+        {
+            System.out.println(y);
+        }
+        else if(x==third && y==second)
+        {
+            System.out.println(y);
+        }
+    }
+}*/
+//list of list problem/*/*
+/*
+package code.master;
+import java.util.Scanner;
+public class version_1
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n == 1)
+        {
+            System.out.println("0 bcz will be 1");
+        }
+        else if(n<=0 || n==2)
+        {
+            System.out.println("-1 Invalid request");
+        }
+        else
+        {
+            System.out.println("Enter The Element");
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                for (int j = i; j <= i; j++) {
+                    arr[j] = sc.nextInt();
+                }
+            }
+            //for traversal
+            for (int i = 0; i < n; i++) {
+                System.out.print(arr[i]);
+                System.out.print(" ");
+            }
+
+        }
+    }
+}
 
 
+package code.master;
+public class version_1
+{
+    public static void main(String [] args)
+    {
+        int n = 444111444;
+        int sum =0;
+        int four = 0;
+        while(n != 0)
+        {
+             int rem = n % 10;
+             sum = sum + rem;
+             n = n/10;
+//            System.out.print(rem);
+            if(rem == 4)
+            {
+                four++;
+            }
+        }
+//        System.out.println(four);
+//        System.out.println(sum);
+    }
+}
+
+package code.master;
+public class version_1
+{
+    static double fact(double n)
+    {
+        double res = 1;
+//        if(n <= 0)
+//        {
+//            return 0;
+//        }
+//        if(n == 1)
+//        {
+//            return 1;
+//        }
+//        else
+//        {
+//            return n * fact(n-1);
+//        }
+
+        for(int i=1;i<=n;i++)
+        {
+            res = res*i;
+        }
+        return res;
 
 
+    }
+    public static void main(String [] args)
+    {
+//        int n = 1235;
+//        int first = 0;
+//        int last = n%10;
+//        while(n >= 10)
+//        {
+//             n = n/10;
+//             first = n%10;
+//        }
+//        System.out.println(last);
+//        System.out.println(first);
+//        int sum = first + last;
+//        System.out.println(sum);
+
+        System.out.println(fact(100));
+
+    }
+}
+
+package code.master;
+public class version_1
+{
+    static void sum(int arr[],int n)
+    {
+        int sum=0;              //1,2,5,4,6
+        int target = 10 ;
+        for (int i=1;i<n;i++)
+        {
+            if(arr[i]+arr[i-1] == target)
+            {
+                System.out.println(i-1 +" "+i);
+            }
+        }
+    }
+    public static void main(String[] args)
+    {
+        int arr[] = {1,2,5,4,6,8};
+        int n = arr.length;
+//        System.out.println(sum(arr,n));
+        sum(arr,n);
+
+    }
+}*/
+
+/*
+package code.master;
+public class version_1
+{
+    static void traversal(int []arr,int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
+    }
+
+    static int arrToInt(int arr[],int n)
+    {
+        int res = 0;
+        System.out.println("Array to number");
+        for (int i=0;i<n;i++)
+        {
+         res = res*10+arr[i];
+        }
+        System.out.println(res);
+        return res;
+    }
+
+    static void numToArray(int number)
+    {
+        String temp  = Integer.toString(number);
+        int []brr = new int[temp.length()];
+        System.out.println("Number To Array");
+        for(int i=0;i<temp.length();i++)
+        {
+            brr[i] = temp.charAt(i) - '0';
+        }
+
+        traversal(brr,temp.length());
+    }
+
+    public static <Char> void main(String [] args)
+    {
+//        int []arr = {1,2,3,4,6,9,10,12};
+//        int n = arr.length;
+//        arrToInt(arr,n);
+//        numToArray(123);
+
+        int arr[] = new int[100];
+        int n = arr.length;
+        System.out.println("Enter The ")
+    }
+}*/
+
+//                Leeetcode Problems Solution
+/*
+package code.master;
+public class version_1
+{
+
+    static boolean isPalindrome(int x)
+    {
+        int sum = 0;
+        int temp = x;
+         while(x > 0)
+         {
+             sum = (sum*10) + x % 10;
+             x /= 10;
+         }
+         if(temp == sum)
+         {
+             return  true;
+         }
+         else
+         {
+             return false;
+         }
+    }
+    public static void main(String[] args)
+    {
+        System.out.println("Welcome To The World Of Boolean");
+
+        System.out.println(isPalindrome(2100000000));
+    }
+}
 
 
+//Roman to Ineger
+package code.master;
+import java.util.Scanner;
+class solution
+{
+    public int roanToInt(String s)
+    {
+        int result = 0;
+        int sum =0;
+        int I = 1;
+        int V  = 5;
+        int X = 10;
+        int L = 50;
+        int C = 100;
+        int D = 500;
+        int M = 1000;
 
+        //String to Char
+//        char c = s.charAt(0);
+        for(int i=0;i<s.length();i++)
+        {
+            char  c = s.charAt(i);
+        }
+
+        return sum;
+    }
+}
+public class version_1
+{
+    static void stringToint(String s)
+    {
+        for(int i=0;i<s.length();i++)
+        {
+
+        }
+    }
+    public static void main(String[] args)
+    {
+//        System.out.println("Enter The number You want to type");
+//        solution sr = new solution();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println(sr.roanToInt("I"));
+
+        stringToint("mdshoiab");
+    }
+}*/
+package code.master;
+class solution
+{
+    public void traversal(int arr[],int n)
+    {
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]);
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+
+//    public int SearchPosition(int arr[],int n,int target)
+//    {
+//        int i;
+//        for(i=0;i<n;i++)
+//        {
+//            if(target == arr[i])
+//            {
+//                System.out.println(i);
+//            }
+//        }
+//        return i;
+//    }
+
+//    public void binarySearch(int arr[],int n,int target)
+//    {
+//        int i;
+//        int low=0;
+//        int high = n-1;
+//        int mid = (low+high)/2;
+//
+//        if(arr[low] == target)
+//        {
+//            System.out.println(low);
+//        }
+//        else if(arr[mid] == target)
+//        {
+//            System.out.println(mid);
+//        }
+//        else if(arr[high] == target)
+//        {
+//            System.out.println(high);
+//        }
+//        else if(target < arr[mid])
+//        {
+//            System.out.println("Left me hoga");
+//        }
+//        else if(target > arr[mid])
+//        {
+//            System.out.println("Right me hoga");
+//        }
+//        else if(target > arr[n-1])
+//        {
+//            System.out.println("Target se bada hai");
+//        }
+//        else
+//        {
+//            System.out.println("Yaha nhi milne wala hai");
+//        }
+//    }
+
+//    public int[] getconcat(int []arr)
+//    {
+//        int len = 2*arr.length;
+//        int []ans = new int[len];
+//        for(int i=0;i<arr.length;i++)
+//        {
+//            ans[i+arr.length] = ans[i] = arr[i];
+//        }
+//
+//        for(int i=0;i<len;i++)
+//        {
+//            System.out.print(ans[i]+" ");
+//        }
+//        return ans;
+//    }
+
+    public int findValue(String[] opera)
+    {
+        int val=0;
+        for(int i=0;i<opera.length;i++)
+        {
+            if(opera[i] == "x++")
+            {
+                val++;
+            }if(opera[i] == "++x")
+            {
+                val++;
+            }if(opera[i] == "x--")
+            {
+                val--;
+            }if(opera[i] == "--x")
+            {
+                val--;
+            }
+        }
+        System.out.println(val);
+
+        return val;
+    }
+}
+public class version_1
+{
+    public static void main(String [] args)
+    {
+        int arr[] = {1,2,3,4,5,6};
+        int n = arr.length;
+        solution sol = new solution();
+        sol.traversal(arr,n);
+//        sol.getconcat(arr);
+
+//        String[] opera = ["--X","X++","X++"];
+//        System.out.println(opera.length);
+//        sol.findValue(opera);
+    }
+}
